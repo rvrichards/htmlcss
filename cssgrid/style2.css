@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  width: 666px;
+  margin: 33px auto;
+  grid-gap: 22px;
+  grid-template-rows: [header-start] 33px [header-end box-start] 66px [box-end main-start] 111px [main-end footer-start] 33px [footer-end];
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 99px [grid-end];
+  
+  grid-template-areas: "head head head head"
+                       "box box box side"
+                       "main main main side"
+                       "foot foot foot foot";
+}
+
+.header {
+  background-color: yellow;
+/*   grid-row: 1/2;    auto placement - not needed */
+/*   grid-column: col-start 1 / grid-end 1;   1/-1; */
+  grid-area: head;
+}
+
+.box {
+  background-color: #00bfff;
+  grid-template-rows: 150px;
+}
+.box1 {}
+.box2 {background-color: #00ade7;}
+.box3 {background-color: #009cd0;}
+
+.main {
+  background-color: red; 
+  grid-column: col-start 1 / col-end 3;   /*  1/-2; */
+}
+
+.sidebar {
+  background-color: yellowgreen;
+/*   grid-row: box-start / main-end;  Span 2 rows */
+/*   grid-column: col-end 3 / grid-end  -2/-1;  */
+  grid-area: side;
+}
+
+.footer { 
+  background-color: MediumPurple;
+/*   grid-column: col-start 1 / grid-end;   1/-1; */
+  grid-area: foot;
+}
