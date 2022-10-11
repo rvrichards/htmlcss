@@ -7,7 +7,7 @@
   grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 99px [grid-end];
   
   grid-template-areas: "head head head head"
-                       "box box box side"
+                       "box-1 box-2 box-3 side"
                        "main main main side"
                        "foot foot foot foot";
 }
@@ -23,9 +23,17 @@
   background-color: #00bfff;
   grid-template-rows: 150px;
 }
-.box1 {}
-.box2 {background-color: #00ade7;}
-.box3 {background-color: #009cd0;}
+.box1 {
+  grid-area: box-1;
+}
+.box2 {
+  background-color: #00ade7;
+  grid-area: box-2;
+}
+.box3 {
+  background-color: #009cd0;
+  grid-area: box-3;
+}
 
 .main {
   background-color: red; 
