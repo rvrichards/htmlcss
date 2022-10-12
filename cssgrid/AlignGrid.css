@@ -1,0 +1,35 @@
+.qwerty {
+  display: grid;      /* div-qwerty is a grid */
+  width: 600px;       /* div-qwerty width */
+  margin: 30px auto;  /* around div-qwerty */
+  background-color: #ddd;  /* of div-qwerty */
+  
+  /*  */
+  grid-template-rows: 111px 111px;     /* Height */ 
+  grid-template-columns: 250px 250px;  /* Width */ 
+  grid-gap: 30px;    /* Grid cells surrounded by 30px gap */
+  /* 2x2 grid. Each cell is therefore 250x111px */
+  
+    /*  Implicit grid settings */
+  grid-auto-rows: 44px;  
+  grid-auto-columns: .5fr;
+  grid-auto-flow: row;
+  
+/* Alignment: Typical values: stretch/center/start/end   */
+  justify-items: center;  /* horizontal direction or row axis   */
+  align-items: center;    /* vertical direction or column axis  */
+  
+  /* Alignment inside of element */
+  /* center/start/end/flex-start/flex-end/left/right*/
+  justify-content: right;
+  
+}
+.item {
+  padding: 11px;
+  color: white;
+  font-family: sans-serif; 
+  font-size: 20px;
+  background-color: orange;  
+} 
+
+ 
