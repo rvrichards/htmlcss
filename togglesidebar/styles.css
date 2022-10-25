@@ -9,6 +9,7 @@
   height: 100%;
   left: -30%;
   background-color: black;
+  transition: all .69s ease;
 }
 
 #sidebar li {
